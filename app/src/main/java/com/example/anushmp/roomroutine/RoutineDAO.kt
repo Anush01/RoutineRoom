@@ -7,11 +7,11 @@ import androidx.room.Query
 
 @Dao
 interface RoutineDAO {
-    @Query("SELECT * FROM user")
+    @Query("SELECT * FROM routines")
     fun getAll(): List<RoutineEntity>
 
     @Insert
-    fun insertAll(vararg routine: RoutineEntity)
+    fun insertAll(routine: RoutineEntity)
 
     @Delete
     fun delete(routineid: Int)
